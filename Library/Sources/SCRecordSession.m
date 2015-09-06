@@ -274,6 +274,12 @@ NSString * const SCRecordSessionDocumentDirectory = @"DocumentDirectory";
 }
 
 - (NSURL *)nextFileURL:(NSError **)error {
+    
+    if(self.fileURLOverride){
+        return self.fileURLOverride;
+    }
+    
+    
     NSString *extension = [self _suggestedFileExtension];
 
     if (extension != nil) {
