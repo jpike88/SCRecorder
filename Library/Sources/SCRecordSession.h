@@ -61,6 +61,8 @@ extern NSString *__nonnull const SCRecordSessionDocumentDirectory;
  */
 @property (copy, nonatomic) NSString *__nullable fileType;
 
+@property (nonatomic) NSURL *__nullable fileURLOverride;
+
 /**
  The extension of every record segments.
  If null, the SCRecordSession will figure out one depending on the fileType.
